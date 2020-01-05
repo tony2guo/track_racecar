@@ -1,0 +1,15 @@
+# ip_address: 
+# ip_port: 10940
+serial_port: /dev/ttyACM0
+serial_baud: 115200
+frame_id: lidar
+calibrate_time: false
+synchronize_time: false
+publish_intensity: false
+publish_multiecho: false
+error_limit: 4
+diagnostics_tolerance: 0.05
+diagnostics_window_time: 5.0
+get_detailed_status: false
+angle_min: deg(-180)
+angle_max: deg(180)

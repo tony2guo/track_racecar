@@ -1,0 +1,37 @@
+<launch>
+  <arg name="use_joystick" default="true" />
+  <arg name="use_keyboard" default="true" />
+  <arg name="use_urg_node" default="true" />
+  <arg name="use_rosserial" default="true" />
+  <arg name="use_twist_mux" default="true" />
+  <arg name="use_usb_cam" default="true" />
+
+  <arg name="launch_dir" default="$(find track_racecar)/launch" />
+  <arg name="config_dir" default="$(find track_racecar)/config" />
+
+  <group if="$(arg use_joystick)">
+    <include file="$(arg launch_dir)/joystick.launch" />
+    <rosparam command="load" ns="joy_node" file="$(arg config_dir)/joy_node.yaml" />
+    <rosparam command="load" ns="teleop_twist_joy" file="$(arg config_dir)/teleop_twist_joy.yaml" />
+  </group>
+  <group if="$(arg use_keyboard)">
+    <include file="$(arg launch_dir)/keyboard.launch" />
+    <rosparam command="load" ns="teleop_twist_keyboard" file="$(arg config_dir)/keyboard.yaml" />
+  </group>
+  <group if="$(arg use_urg_node)">
+    <include file="$(arg launch_dir)/urg_node.launch" />
+    <rosparam command="load" ns="urg_node" file="$(arg config_dir)/urg_node.yaml" />
+  </group>
+  <group if="$(arg use_rosserial)">
+    <include file="$(arg launch_dir)/rosserial.launch" />
+    <rosparam command="load" ns="serial_node" file="$(arg config_dir)/rosserial.yaml" />
+  </group>
+  <group if="$(arg use_twist_mux)">
+    <include file="$(arg launch_dir)/twist_mux.launch" />
+    <rosparam command="load" ns="twist_mux" file="$(arg config_dir)/twist_mux.yaml" />
+  </group>
+  <group if="$(arg use_usb_cam)">
+    <include file="$(arg launch_dir)/usb_cam.launch" />
+    <rosparam command="load" ns="usb_cam" file="$(arg config_dir)/usb_cam.yaml" />
+  </group>
+</launch>

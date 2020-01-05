@@ -1,0 +1,23 @@
+video_device: /dev/video0
+image_width: 640
+image_height: 480
+pixel_format: yuyv
+io_method: mmap
+camera_frame_id: camera
+framerate: 30
+# contrast: # (integer, default: 32)
+# Contrast of video image: # (0-255)
+# brightness: # (integer, default: 32)
+# Brightness of video image: # (0-255)
+# saturation: # (integer, default: 32)
+# Saturation of video image: # (0-255)
+# sharpness: # (integer, default: 22)
+# Sharpness of video image: # (0-255)
+# autofocus: # (boolean, default: false)
+# Enable camera's autofocus
+# focus: # (integer, default: 51)
+# If autofocus is disabled, the focus of the camera: # (0=at infinity)
+# camera_info_url: # (string, default: )
+# An url to the camera calibration file that will be read by the CameraInfoManager class
+# camera_name: # (string, default: head_camera)
+# The camera name. This must match the name in the camera calibration

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot name="track_racecar" 
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.32 0.1" />
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="camera">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="camera" />
+    <origin xyz="0 0 0.31" rpy="0 0 0" />
+  </joint>
+
+  <link name="lidar">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.07" />
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="lidar" />
+    <origin xyz="0 0 0.16" rpy="0 0 0" />
+  </joint>
+
+</robot>
