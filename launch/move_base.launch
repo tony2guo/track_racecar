@@ -1,0 +1,5 @@
+<launch>
+  <node name="move_base" pkg="move_base" type="move_base" output="screen">
+    <remap from="cmd_vel" to="nav_vel"/>
+  </node>
+</launch>

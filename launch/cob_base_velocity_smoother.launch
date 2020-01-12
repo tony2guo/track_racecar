@@ -1,0 +1,6 @@
+<launch>
+  <node name="cob_base_velocity_smoother" pkg="cob_base_velocity_smoother" type="velocity_smoother" output="screen">
+    <remap from="~raw_cmd_vel" to="mux_vel"/>
+    <remap from="~smooth_cmd_vel" to="smooth_vel"/>
+  </node>
+</launch>

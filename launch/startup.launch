@@ -5,9 +5,15 @@
   <arg name="use_rosserial" default="true" />
   <arg name="use_twist_mux" default="true" />
   <arg name="use_usb_cam" default="true" />
+  <arg name="use_cob_base_velocity_smoother" default="true" />
+  <arg name="use_move_base" default="true" />
+  <arg name="use_robot_state_publisher" default="true" />
 
   <arg name="launch_dir" default="$(find track_racecar)/launch" />
   <arg name="config_dir" default="$(find track_racecar)/config" />
+
+  <arg name="model" default="$(find track_racecar)/urdf/track_racecar.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
 
   <group if="$(arg use_joystick)">
     <include file="$(arg launch_dir)/joystick.launch" />
@@ -33,5 +39,21 @@
   <group if="$(arg use_usb_cam)">
     <include file="$(arg launch_dir)/usb_cam.launch" />
     <rosparam command="load" ns="usb_cam" file="$(arg config_dir)/usb_cam.yaml" />
+  </group>
+  <group if="$(arg use_cob_base_velocity_smoother)">
+    <include file="$(arg launch_dir)/cob_base_velocity_smoother.launch" />
+    <rosparam command="load" ns="cob_base_velocity_smoother" file="$(arg config_dir)/cob_base_velocity_smoother.yaml" />
+  </group>
+  <group if="$(arg use_move_base)">
+    <include file="$(arg launch_dir)/move_base.launch" />
+    <group ns="move_base">
+      <rosparam command="load" file="$(arg config_dir)/move_base.yaml" />
+      <!-- <rosparam command="load" file="$(arg config_dir)/base_local_planner.yaml" />
+      <rosparam command="load" file="$(arg config_dir)/costmap.yaml" /> -->
+    </group>
+  </group>
+  <group if="$(arg use_robot_state_publisher)">
+    <include file="$(arg launch_dir)/robot_state_publisher.launch" />
+    <rosparam command="load" ns="robot_state_publisher" file="$(arg config_dir)/robot_state_publisher.yaml" />
   </group>
 </launch>

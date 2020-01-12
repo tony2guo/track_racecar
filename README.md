@@ -9,5 +9,6 @@ bash install.sh
 
 ## Usage
 ```bash
-roslaunch track_racecar startup.launch
+cd
+. startup.sh
 ```

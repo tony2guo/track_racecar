@@ -1,0 +1,4 @@
+# tf_prefix: 
+publish_frequency: 50
+ignore_timestamp: false
+use_tf_static: true
