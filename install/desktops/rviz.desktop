@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=rviz
+Exec=/bin/bash -c "source /opt/ros/kinetic/setup.bash&&source ~/catkin_ws/devel/setup.bash&&rviz -d $(rospack find track_racecar)/rviz/track_racecar.rviz"
+Icon=/opt/ros/kinetic/share/rviz/icons/package.png
+Type=Application

@@ -1,3 +1,5 @@
+echo copy desktop
+cp -a desktops/. ~/Desktop
 echo copy scripts
 cp -a scripts/. ~/
 echo copy rules

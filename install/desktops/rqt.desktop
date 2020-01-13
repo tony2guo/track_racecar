@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=rqt
+Exec=/bin/bash -c "source /opt/ros/kinetic/setup.bash&&source ~/catkin_ws/devel/setup.bash&&rqt --perspective-file $(rospack find track_racecar)/rqt/track_racecar.perspective"
+Icon=/opt/ros/kinetic/share/rqt_gui/resource/rqt.png
+Type=Application
