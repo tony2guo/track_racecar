@@ -54,6 +54,7 @@
   <depend>rospy</depend>
   <depend>std_msgs</depend>
   
+  <exec_depend>ackermann_msgs</exec_depend>
   <exec_depend>cob_base_velocity_smoother</exec_depend>
   <exec_depend>joy</exec_depend>
   <exec_depend>move_base</exec_depend>

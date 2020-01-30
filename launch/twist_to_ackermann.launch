@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="track_racecar" type="twist_to_ackermann.py" name="twist_to_ackermann" output="screen">
+    <remap from="cmd_vel" to="smooth_vel"/>
+  </node>
+  <node pkg="topic_tools" type="transform" name="ackermann_speed" args="/ackermann /ackermann_speed std_msgs/Float32 'm.speed' --wait-for-start" output="screen" />
+  <node pkg="topic_tools" type="transform" name="ackermann_steering_angle" args="/ackermann /ackermann_steering_angle std_msgs/Float32 'm.steering_angle' --wait-for-start" output="screen" />
+</launch>
