@@ -56,10 +56,14 @@
   
   <exec_depend>ackermann_msgs</exec_depend>
   <exec_depend>cob_base_velocity_smoother</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>cv_camera</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>joy</exec_depend>
-  <exec_depend>move_base</exec_depend>
+  <exec_depend>navigation</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>rosserial_python</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>teleop_twist_joy</exec_depend>
   <exec_depend>teleop_twist_keyboard</exec_depend>
   <exec_depend>twist_mux</exec_depend>

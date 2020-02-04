@@ -1,0 +1,4 @@
+<launch>
+  <node name="line_follower" pkg="track_racecar" type="line_follower.py" output="screen" />
+  <node name="republish" type="republish" pkg="image_transport" output="screen" args="raw in:=/line_follower/image_raw compressed out:=/line_follower/image_raw" />
+</launch>

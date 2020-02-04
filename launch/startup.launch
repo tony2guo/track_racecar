@@ -4,11 +4,13 @@
   <arg name="use_urg_node" default="true" />
   <arg name="use_rosserial" default="true" />
   <arg name="use_twist_mux" default="true" />
-  <arg name="use_usb_cam" default="true" />
+  <arg name="use_usb_cam" default="false" />
   <arg name="use_cob_base_velocity_smoother" default="true" />
   <arg name="use_move_base" default="true" />
   <arg name="use_robot_state_publisher" default="true" />
   <arg name="use_twist_to_ackermann" default="true" />
+  <arg name="use_line_follower" default="true" />
+  <arg name="use_cv_camera" default="true" />
 
   <arg name="launch_dir" default="$(find track_racecar)/launch" />
   <arg name="config_dir" default="$(find track_racecar)/config" />
@@ -60,5 +62,13 @@
   <group if="$(arg use_twist_to_ackermann)">
     <include file="$(arg launch_dir)/twist_to_ackermann.launch" />
     <rosparam command="load" ns="twist_to_ackermann" file="$(arg config_dir)/twist_to_ackermann.yaml" />
+  </group>
+  <group if="$(arg use_line_follower)">
+    <include file="$(arg launch_dir)/line_follower.launch" />
+    <!-- <rosparam command="load" ns="line_follower" file="$(arg config_dir)/line_follower.yaml" /> -->
+  </group>
+  <group if="$(arg use_cv_camera)">
+    <include file="$(arg launch_dir)/cv_camera.launch" />
+    <rosparam command="load" ns="cv_camera" file="$(arg config_dir)/cv_camera.yaml" />
   </group>
 </launch>

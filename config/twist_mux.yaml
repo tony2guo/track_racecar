@@ -7,6 +7,11 @@
 
 topics:
     -
+      name    : line_follower
+      topic   : line_follower/cmd_vel
+      timeout : 0.5
+      priority: 9
+    -
       name    : navigation
       topic   : nav_vel
       timeout : 0.5

@@ -1,0 +1,14 @@
+device_id: 0
+frame_id: camera
+image_width: 640
+image_height: 480
+# ~rate (double, default: 30.0) – publish rate [Hz].
+# ~device_id (int, default: 0) – capture device id.
+# ~device_path (string, default: "") – path to camera device file, e. g. /dev/video0.
+# ~frame_id (string, default: "camera") – frame_id of message header.
+# ~image_width (int) – try to set capture image width.
+# ~image_height (int) – try to set capture image height.
+# ~camera_info_url (string) – url of camera info yaml.
+# ~file (string, default: "") – if not "" then use movie file instead of device.
+# ~capture_delay (double, default: 0) – estimated duration of capturing and receiving the image.
+# ~rescale_camera_info (bool, default: false) – rescale camera calibration info automatically.
