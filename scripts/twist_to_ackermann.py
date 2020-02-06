@@ -10,7 +10,7 @@ def cmd_vel_cb(msg):
     pub_msg.speed = msg.linear.x
     if msg.linear.x != 0 and msg.angular.z != 0:
         turn_radius = msg.linear.x / msg.angular.z
-        pub_msg.steering_angle = math.atan2(front_rear_distance, turn_radius)
+        pub_msg.steering_angle = math.atan(front_rear_distance/turn_radius)
     ackermann_pub.publish(pub_msg)
 
 if __name__ == '__main__': 
