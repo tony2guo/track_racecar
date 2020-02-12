@@ -9,7 +9,7 @@ controller_patience: 15.0
 planner_frequency: 0.0
 planner_patience: 5.0
 max_planning_retries: 10
-oscillation_timeout: 30.0
+oscillation_timeout: 0
 
 recovery_behavior_enabled: false
 recovery_behaviors: [{name: conservative_reset, type: clear_costmap_recovery/ClearCostmapRecovery}, {name: aggressive_reset, type: clear_costmap_recovery/ClearCostmapRecovery}]
@@ -17,23 +17,20 @@ conservative_reset:
   reset_distance: 3.0
 
 global_costmap:
-  plugins: 
-    - {name: obstacle_layer,  type: "costmap_2d::ObstacleLayer"}
+  plugins: []
   global_frame: base_link
   robot_base_frame: base_link
   transform_tolerance: 0.2
-  update_frequency: 0
+  update_frequency: 0.1
   publish_frequency: 0
   static_map: true
   rolling_window: false
   always_send_full_costmap: false
-  width: 0
-  height: 0
+  width: 5
+  height: 5
   resolution: 0.05
-  origin_x: 0
-  origin_y: 0
-  obstacle_layer:
-    enabled: false
+  origin_x: -2.5
+  origin_y: -2.5
     
 local_costmap:
   plugins: 
@@ -50,8 +47,8 @@ local_costmap:
   width: 5
   height: 5
   resolution: 0.05
-  origin_x: 0
-  origin_y: 0
+  origin_x: -2.5
+  origin_y: -2.5
   obstacle_layer:
     enabled: true
     observation_sources: urg_lidar
@@ -63,3 +60,5 @@ local_costmap:
       inf_is_valid: false
       min_obstacle_height: 0
       max_obstacle_height: 1
+      obstacle_range: 3
+      raytrace_range: 10
