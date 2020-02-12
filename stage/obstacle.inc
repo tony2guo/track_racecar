@@ -1,0 +1,4 @@
+define obstacle model
+(
+  size [0.2 0.2 1.0]
+)

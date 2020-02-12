@@ -66,6 +66,7 @@
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>rosserial_python</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>stage_ros</exec_depend>
   <exec_depend>teleop_twist_joy</exec_depend>
   <exec_depend>teleop_twist_keyboard</exec_depend>
   <exec_depend>twist_mux</exec_depend>

@@ -1,0 +1,71 @@
+include "robot.inc"
+include "obstacle.inc"
+
+# World
+name "empty"
+interval_sim 100
+quit_time 0
+resolution 0.02
+
+show_clock 0
+show_clock_interval 100
+threads 1
+
+speedup 1
+
+# WorldGui
+window
+(
+  size [ 640 480 ]
+  
+  # camera options
+  center [ 0 0 ]
+  rotate [ 0 0 ]
+  scale 100.0
+
+  # perspective camera options
+  pcam_loc [ 0 -4 2 ]
+  pcam_angle [ 70 0 ]
+
+  # GUI options
+  show_data 1
+  show_flags 1
+  show_blocks 1
+  show_clock 1
+  show_footprints 0
+  show_grid 1
+  show_trailarrows 0
+  show_trailrise 0
+  show_trailfast 0
+  show_occupancy 0
+  pcam_on 0
+  screenshots 0
+)
+
+
+robot
+(
+  name "robot"
+  pose [ 0.0 0.0 0.0 0.0 ]
+)
+
+obstacle
+(
+  name "obstacle_1"
+  pose [ 1.0 0.0 0.0 0.0 ]
+  color "blue"
+)
+
+obstacle
+(
+  name "obstacle_2"
+  pose [ 2.0 0.0 0.0 0.0 ]
+  color "green"
+)
+
+obstacle
+(
+  name "obstacle_3"
+  pose [ 3.0 0.0 0.0 0.0 ]
+  color "yellow"
+)

@@ -11,6 +11,7 @@
   <arg name="use_twist_to_ackermann" default="true" />
   <arg name="use_line_follower" default="true" />
   <arg name="use_cv_camera" default="true" />
+  <arg name="use_stage_ros" default="false" />
 
   <arg name="launch_dir" default="$(find track_racecar)/launch" />
   <arg name="config_dir" default="$(find track_racecar)/config" />
@@ -70,5 +71,9 @@
   <group if="$(arg use_cv_camera)">
     <include file="$(arg launch_dir)/cv_camera.launch" />
     <rosparam command="load" ns="cv_camera" file="$(arg config_dir)/cv_camera.yaml" />
+  </group>
+  <group if="$(arg use_stage_ros)">
+    <include file="$(arg launch_dir)/stage_ros.launch" />
+    <!-- <rosparam command="load" ns="stage_ros" file="$(arg config_dir)/stage_ros.yaml" /> -->
   </group>
 </launch>
