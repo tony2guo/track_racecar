@@ -1,0 +1,7 @@
+coefficient: 0.27777777777
+speed_limit: 100
+detection_zone:
+    xmin: 0
+    xmax: 640
+    ymin: 0
+    ymax: 480

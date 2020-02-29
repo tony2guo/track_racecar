@@ -13,6 +13,7 @@
   <arg name="use_cv_camera" default="true" />
   <arg name="use_stage_ros" default="false" />
   <arg name="use_darknet_ros" default="true" />
+  <arg name="use_class_to_speed" default="true" />
   
   <arg name="launch_dir" default="$(find track_racecar)/launch" />
   <arg name="config_dir" default="$(find track_racecar)/config" />
@@ -81,5 +82,9 @@
     <include file="$(arg launch_dir)/darknet_ros.launch" />
     <rosparam command="load" ns="darknet_ros" file="$(arg config_dir)/darknet_ros.yaml" />
     <rosparam command="load" ns="darknet_ros" file="$(arg config_dir)/yolo_model.yaml" subst_value="true" />
+  </group>
+  <group if="$(arg use_class_to_speed)">
+    <include file="$(arg launch_dir)/class_to_speed.launch" />
+    <rosparam command="load" ns="class_to_speed" file="$(arg config_dir)/class_to_speed.yaml" />
   </group>
 </launch>

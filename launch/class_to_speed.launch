@@ -1,0 +1,3 @@
+<launch>
+  <node name="class_to_speed" pkg="track_racecar" type="class_to_speed.py" output="screen" />
+</launch>
