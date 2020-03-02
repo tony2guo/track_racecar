@@ -1,0 +1,3 @@
+TrajectoryPlannerROS:
+  min_in_place_vel_theta: 0
+  holonomic_robot: false
