@@ -1,92 +1,18 @@
-weights_path: $(find darknet_ros)/yolo_network_config/weights
-config_path: $(find darknet_ros)/yolo_network_config/cfg
+weights_path: $(find track_racecar)/config/yolo
+config_path: $(find track_racecar)/config/yolo
 
 yolo_model:
   config_file:
-    name: yolov3.cfg
+    name: traffic_light_and_sign.cfg
   weight_file:
-    name: yolov3.weights
+    name: traffic_light_and_sign.weights
   threshold:
-    value: 0.3
+    value: 0.9
   detection_classes:
     names:
-      - person
-      - bicycle
-      - car
-      - motorbike
-      - aeroplane
-      - bus
-      - train
-      - truck
-      - boat
-      - traffic light
-      - fire hydrant
-      - stop sign
-      - parking meter
-      - bench
-      - bird
-      - cat
-      - dog
-      - horse
-      - sheep
-      - cow
-      - elephant
-      - bear
-      - zebra
-      - giraffe
-      - backpack
-      - umbrella
-      - handbag
-      - tie
-      - suitcase
-      - frisbee
-      - skis
-      - snowboard
-      - sports ball
-      - kite
-      - baseball bat
-      - baseball glove
-      - skateboard
-      - surfboard
-      - tennis racket
-      - bottle
-      - wine glass
-      - cup
-      - fork
-      - knife
-      - spoon
-      - bowl
-      - banana
-      - apple
-      - sandwich
-      - orange
-      - broccoli
-      - carrot
-      - hot dog
-      - pizza
-      - donut
-      - cake
-      - chair
-      - sofa
-      - pottedplant
-      - bed
-      - diningtable
-      - toilet
-      - tvmonitor
-      - laptop
-      - mouse
-      - remote
-      - keyboard
-      - cell phone
-      - microwave
-      - oven
-      - toaster
-      - sink
-      - refrigerator
-      - book
-      - clock
-      - vase
-      - scissors
-      - teddy bear
-      - hair drier
-      - toothbrush
+      - traffic_light_red
+      - traffic_light_yellow
+      - traffic_light_green
+      - speed_limit_30
+      - speed_limit_60
+      - stop_sign

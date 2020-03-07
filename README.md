@@ -12,6 +12,7 @@ git clone --recursive https://github.com/leggedrobotics/darknet_ros.git
 roscd track_racecar/install
 bash install.sh
 ```
+Download [traffic_light_and_sign.weights](https://drive.google.com/file/d/1DtZ6CmAAV_JgOK7YKwRsDAlO1Nl6GIi1/view?usp=sharing) to track_racecar/config/yolo/
 
 ## Usage
 startup
