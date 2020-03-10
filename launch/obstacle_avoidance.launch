@@ -1,0 +1,3 @@
+<launch>
+  <node name="obstacle_avoidance" pkg="track_racecar" type="obstacle_avoidance.py" output="screen" />
+</launch>

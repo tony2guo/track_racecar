@@ -14,6 +14,8 @@
   <arg name="use_stage_ros" default="false" />
   <arg name="use_darknet_ros" default="true" />
   <arg name="use_class_to_speed" default="true" />
+  <arg name="use_laser_filters" default="true" />
+  <arg name="use_obstacle_avoidance" default="false" />
   
   <arg name="launch_dir" default="$(find track_racecar)/launch" />
   <arg name="config_dir" default="$(find track_racecar)/config" />
@@ -86,5 +88,13 @@
   <group if="$(arg use_class_to_speed)">
     <include file="$(arg launch_dir)/class_to_speed.launch" />
     <rosparam command="load" ns="class_to_speed" file="$(arg config_dir)/class_to_speed.yaml" />
+  </group>
+  <group if="$(arg use_laser_filters)">
+    <include file="$(arg launch_dir)/laser_filters.launch" />
+    <rosparam command="load" ns="laser_filters" file="$(arg config_dir)/laser_filters.yaml" />
+  </group>
+  <group if="$(arg use_obstacle_avoidance)">
+    <include file="$(arg launch_dir)/obstacle_avoidance.launch" />
+    <!-- <rosparam command="load" ns="obstacle_avoidance" file="$(arg config_dir)/obstacle_avoidance.yaml" /> -->
   </group>
 </launch>

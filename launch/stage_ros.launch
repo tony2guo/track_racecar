@@ -1,4 +1,5 @@
 <launch>
+  <param name ="/use_sim_time" value="true"/>
   <node pkg="stage_ros" type="stageros" name="stageros" args="$(find track_racecar)/stage/empty.world">
 		<remap from="base_scan" to="scan"/>
   </node>
