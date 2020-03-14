@@ -1,4 +1,4 @@
-coefficient: 0.27777777777
+coefficient: 0.01
 speed_limit: 100
 stop_second: 6
 ignore_stop_second: 3
@@ -6,42 +6,42 @@ detection_constraint:
   traffic_light_red:
     area_min: 1000
     area_max: 10000
-    xmin: 320
+    xmin: 450
     xmax: 640
     ymin: 0
-    ymax: 240
+    ymax: 100
   traffic_light_yellow:
     area_min: 1000
     area_max: 10000
-    xmin: 320
+    xmin: 450
     xmax: 640
     ymin: 0
-    ymax: 240
+    ymax: 100
   traffic_light_green:
     area_min: 1000
     area_max: 10000
-    xmin: 320
+    xmin: 450
     xmax: 640
     ymin: 0
-    ymax: 240
+    ymax: 100
   speed_limit_30:
     area_min: 1000
     area_max: 10000
-    xmin: 400
+    xmin: 460
     xmax: 640
-    ymin: 120
-    ymax: 360
+    ymin: 0
+    ymax: 480
   speed_limit_60:
     area_min: 1000
     area_max: 10000
-    xmin: 400
+    xmin: 460
     xmax: 640
-    ymin: 120
-    ymax: 360
+    ymin: 0
+    ymax: 480
   stop_sign:
     area_min: 1000
     area_max: 10000
-    xmin: 400
+    xmin: 460
     xmax: 640
-    ymin: 120
-    ymax: 360
+    ymin: 0
+    ymax: 480
