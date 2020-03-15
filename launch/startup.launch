@@ -15,7 +15,7 @@
   <arg name="use_darknet_ros" default="true" />
   <arg name="use_class_to_speed" default="true" />
   <arg name="use_laser_filters" default="true" />
-  <arg name="use_obstacle_avoidance" default="false" />
+  <arg name="use_obstacle_avoidance" default="true" />
   <arg name="use_odom_base_link_broadcaster" default="$(eval not use_stage_ros)" />
   
   <arg name="launch_dir" default="$(find track_racecar)/launch" />
@@ -96,7 +96,7 @@
   </group>
   <group if="$(arg use_obstacle_avoidance)">
     <include file="$(arg launch_dir)/obstacle_avoidance.launch" />
-    <!-- <rosparam command="load" ns="obstacle_avoidance" file="$(arg config_dir)/obstacle_avoidance.yaml" /> -->
+    <rosparam command="load" ns="obstacle_avoidance" file="$(arg config_dir)/obstacle_avoidance.yaml" />
   </group>
   <group if="$(arg use_odom_base_link_broadcaster)">
     <include file="$(arg launch_dir)/odom_base_link_broadcaster.launch" />

@@ -12,8 +12,8 @@ topics:
       timeout : 0.5
       priority: 9
     -
-      name    : navigation
-      topic   : nav_vel
+      name    : obstacle_avoidance
+      topic   : obstacle_avoidance/cmd_vel
       timeout : 0.5
       priority: 10
     -

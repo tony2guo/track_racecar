@@ -8,7 +8,7 @@ global_costmap:
   static_map: true
   rolling_window: false
   always_send_full_costmap: false
-  width: 5
+  width: 6
   height: 1
   resolution: 0.05
   origin_x: -1
